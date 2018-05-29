@@ -17,6 +17,8 @@ package com.utils.permission;
 
 import android.content.Context;
 
+import com.yanzhenjie.permission.R;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;

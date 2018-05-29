@@ -96,7 +96,9 @@ public final class PermissionActivity extends Activity {
             case VALUE_INPUT_PERMISSION: {
                 String[] permissions = intent.getStringArrayExtra(KEY_INPUT_PERMISSIONS);
                 if (permissions != null && sRequestListener != null) {
-                    requestPermissions(permissions, VALUE_INPUT_PERMISSION);
+                    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                        requestPermissions(permissions, VALUE_INPUT_PERMISSION);
+                    }
                 } else {
                     finish();
                 }
